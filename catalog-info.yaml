@@ -20,7 +20,8 @@ spec:
   owner: ai-labs
   repository: https://github.com/sf34gsd/full-deploy-test-1760777764
   dockerImage: gcr.io/deeplearning2-178817/full-deploy-test-1760777764:latest
-  deploymentStatus: stopped
+  deploymentStatus: running
+  deploymentUrl: https://full-deploy-test-1760777764-es7g3can2q-uc.a.run.app
   infrastructure:
     provider: cloudrun
     region: us-central1
