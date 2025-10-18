@@ -1,0 +1,16 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'us-central1-docker.pkg.dev/deeplearning2-178817/deployments/full-deploy-test-1760777764:$SHORT_SHA'
+      - '-t'
+      - 'us-central1-docker.pkg.dev/deeplearning2-178817/deployments/full-deploy-test-1760777764:latest'
+      - '.'
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-central1-docker.pkg.dev/deeplearning2-178817/deployments/full-deploy-test-1760777764:$SHORT_SHA']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-central1-docker.pkg.dev/deeplearning2-178817/deployments/full-deploy-test-1760777764:latest']
+images:
+  - 'us-central1-docker.pkg.dev/deeplearning2-178817/deployments/full-deploy-test-1760777764:$SHORT_SHA'
+  - 'us-central1-docker.pkg.dev/deeplearning2-178817/deployments/full-deploy-test-1760777764:latest'

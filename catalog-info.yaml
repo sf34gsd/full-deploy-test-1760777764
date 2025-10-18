@@ -1,0 +1,30 @@
+apiVersion: backstage.io/v1alpha1
+kind: ProofOfConcept
+metadata:
+  name: full-deploy-test-1760777764
+  title: Full Deploy Test 1760777764
+  description: Proof of concept for full-deploy-test-1760777764
+  annotations:
+    github.com/project-slug: sf34gsd/full-deploy-test-1760777764
+    poc.liven.ai/docker-image: gcr.io/deeplearning2-178817/full-deploy-test-1760777764:latest
+  tags:
+    - poc
+    - experimental
+  links:
+    - url: https://github.com/sf34gsd/full-deploy-test-1760777764
+      title: GitHub Repository
+      icon: github
+spec:
+  type: api
+  lifecycle: experimental
+  owner: ai-labs
+  repository: https://github.com/sf34gsd/full-deploy-test-1760777764
+  dockerImage: gcr.io/deeplearning2-178817/full-deploy-test-1760777764:latest
+  deploymentStatus: stopped
+  infrastructure:
+    provider: cloudrun
+    region: us-central1
+    serviceName: full-deploy-test-1760777764
+    resources:
+      cpu: 1
+      memory: 512Mi
